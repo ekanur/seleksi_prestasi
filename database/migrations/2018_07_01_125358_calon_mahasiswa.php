@@ -17,6 +17,8 @@ class CalonMahasiswa extends Migration
             $table->increments('id');
             $table->varchar("no_pendaftaran", 10);
             $table->integer("dosen_id");
+            $table->varchar("nama", 25);
+            $table->varchar("sekolah_asal", 40);
             $table->timestamps();
             $table->softDeletes();
             //

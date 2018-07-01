@@ -62,7 +62,7 @@
                                     <span class="navbar-toggler-bar bar3"></span>
                                 </button>
                             </div>
-                            <a class="navbar-brand" href="#pablo">@if(isset($detail_calon_penerima[0]->cmhs_nm)) Survey "{{$detail_calon_penerima[0]->cmhs_nm}}" @endif</a>
+                            <a class="navbar-brand" href="#pablo">Form Penilaian</a>
                         </div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -90,7 +90,7 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="now-ui-icons users_single-02"></i>
-                                        {{ session('userID') }}
+                                        {{-- {{ session('userID') }} --}} NIP Dosen
                                         <p>
                                             <span class="d-lg-none d-md-block">User</span>
                                         </p>
@@ -123,7 +123,7 @@
 <script src="{{ asset("js/core/bootstrap.min.js") }}"></script>
 <script src="{{ asset("js/plugins/perfect-scrollbar.jquery.min.js") }}"></script>
 <!--  Google Maps Plugin    -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+{{-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> --}}
 <!-- Chart JS -->
 <script src="{{ asset("js/plugins/chartjs.min.js") }}"></script>
 <!--  Notifications Plugin    -->

@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"> Calon Penerima Bidik Misi</h4>
+                        <h4 class="card-title">Peserta Seleksi Prestasi Jalur Mandiri</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -21,31 +21,31 @@
                                                     Nama
                                                 </th>
                                                 <th>
-                                                    Alamat
+                                                    Sekolah Asal
                                                 </th width="60%">
                                                 <th>
-                                                    Sekolah Asal
+                                                    Nilai
                                                 </th>
                                                 <th class="text-right">
-                                                    Survey
+                                                    Penilaian
                                                 </th>
                                     </tr>
                                     
                                 </thead>
                                 <tbody>
-                                    @foreach($calon_penerima as $calon_penerima)
+                                    @foreach($calon_mahasiswa as $calon_mahasiswa)
                                     <tr>
                                         <td>
-                                            {{$calon_penerima->nama}}
+                                            {{$calon_mahasiswa->nama}}
                                         </td>
                                         <td>
-                                            {{$calon_penerima->alamat}}
+                                            {{$calon_mahasiswa->asal_sekolah}}
                                         </td>
                                         <td>
-                                            {{$calon_penerima->sekolah_asal}}
+                                            {{$calon_mahasiswa->nilaiss}}
                                         </td>
                                         <td class="text-right">
-                                            <a href="{{ url("/angket/".$calon_penerima->id) }}"><i class="now-ui-icons files_single-copy-04"></i></a>
+                                            <a href="{{ url("/penilaian/".$calon_mahasiswa->id) }}"><i class="now-ui-icons files_single-copy-04"></i></a>
                                         </td>
                                     </tr>
                                     @endforeach
