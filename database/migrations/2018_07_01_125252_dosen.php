@@ -13,14 +13,14 @@ class Dosen extends Migration
      */
     public function up()
     {
-        Schema::create('dosen', function (Blueprint $table) {
-            $table->increments('id');
-            $table->varchar("nip", 20);
-            $table->varchar("fakultas", 6)->nullable();
-            $table->softDeletes();
-            $table->timestamps();
-            //
-        });
+        // Schema::create('dosen', function (Blueprint $table) {
+        //     $table->increments('id');
+        //     $table->varchar("nip", 20);
+        //     $table->varchar("fakultas", 6)->nullable();
+        //     $table->softDeletes();
+        //     $table->timestamps();
+        //     //
+        // });
     }
 
     /**

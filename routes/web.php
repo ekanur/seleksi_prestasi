@@ -12,6 +12,6 @@
 */
 
 Route::get('/', "IndexController@index");
-Route::get('/penilaian/{calon_penerima_id}', "PenilaianController@detail");
+Route::get('/penilaian/{no_pendaftaran}', "PenilaianController@detail");
 Route::post('/penilaian', "PenilaianController@save");
 Route::post('/ubah-penilaian', "PenilaianController@update");

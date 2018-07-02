@@ -13,16 +13,14 @@ class CalonMahasiswa extends Migration
      */
     public function up()
     {
-        Schema::create('calon_mahasiswa', function (Blueprint $table) {
-            $table->increments('id');
-            $table->varchar("no_pendaftaran", 10);
-            $table->integer("dosen_id");
-            $table->varchar("nama", 25);
-            $table->varchar("sekolah_asal", 40);
-            $table->timestamps();
-            $table->softDeletes();
-            //
-        });
+        // Schema::create('dosen_penilai', function (Blueprint $table) {
+        //     $table->increments('id');
+        //     $table->integer("nip");
+        //     $table->varchar("no_pendaftaran", 10);
+        //     $table->timestamps();
+        //     $table->softDeletes();
+        //     //
+        // });
     }
 
     /**

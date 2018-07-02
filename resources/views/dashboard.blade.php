@@ -24,7 +24,7 @@
                                                     Sekolah Asal
                                                 </th width="60%">
                                                 <th>
-                                                    Nilai
+                                                    Status
                                                 </th>
                                                 <th class="text-right">
                                                     Penilaian
@@ -36,16 +36,20 @@
                                     @foreach($calon_mahasiswa as $calon_mahasiswa)
                                     <tr>
                                         <td>
-                                            {{$calon_mahasiswa->nama}}
+                                            {{$calon_mahasiswa->detail_mahasiswa->nama_iden}}
                                         </td>
                                         <td>
-                                            {{$calon_mahasiswa->asal_sekolah}}
+                                            {{$calon_mahasiswa->detail_mahasiswa->sma->slta}}
                                         </td>
                                         <td>
-                                            {{$calon_mahasiswa->nilaiss}}
+                                            @if(is_null($calon_mahasiswa->nilai)) 
+                                            <span class="text-warning">Belum dinilai</span>
+                                            @else
+                                            <span class="text-success">Sudah dinilai</span>
+                                            @endif
                                         </td>
                                         <td class="text-right">
-                                            <a href="{{ url("/penilaian/".$calon_mahasiswa->id) }}"><i class="now-ui-icons files_single-copy-04"></i></a>
+                                            <a href="{{ url("/penilaian/".$calon_mahasiswa->id_calon_mhs) }}"><i class="now-ui-icons files_single-copy-04"></i></a>
                                         </td>
                                     </tr>
                                     @endforeach
