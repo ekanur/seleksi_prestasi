@@ -11,7 +11,7 @@ use App\Nilai;
 class PenilaianController extends Controller
 {
     function detail($id_calon_mhs){
-    	$nip = 197806282003121004;
+    	$nip = session('userID');
     	$detail_calon_mahasiswa = Calon_mahasiswa::with(["dosen_penilai"=>function($query) use ($nip){
     		$query->where("nip", $nip);
     	}, "file"=>function($query){
@@ -35,7 +35,7 @@ class PenilaianController extends Controller
     }
 
     function save(Request $request){
-        $nip = '197806282003121004';
+        $nip = session('userID');
         $nilai = json_encode(array($request->dokumen_asli, $request->uji_kompetensi,  $request->motivasi));
 
         $penilaian = new Nilai;
@@ -51,7 +51,7 @@ class PenilaianController extends Controller
     }
 
     function update(Request $request){
-         $nip = '197806282003121004';
+         // $nip = '197806282003121004';
          $nilai = json_encode(array($request->dokumen_asli, $request->uji_kompetensi,  $request->motivasi));
          $penilaian = Nilai::find($request->nilai_id);
          $penilaian->nilai = $nilai;

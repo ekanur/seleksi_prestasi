@@ -30,7 +30,7 @@
                         
                     </a>
                     <a href="" class="simple-text logo-normal">
-                        Survey Bidik Misi
+                        Seleksi Prestasi Jalur Mandiri
                     </a>
                 </div>
                 <div class="sidebar-wrapper">
@@ -44,7 +44,7 @@
                         <li class="active">
                             <a href="{{ url("/") }}">
                                 <i class="now-ui-icons education_atom"></i>
-                                <p>Survey</p>
+                                <p>Seleksi</p>
                             </a>
                         </li>
                 </ul>
@@ -90,7 +90,7 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="now-ui-icons users_single-02"></i>
-                                        {{-- {{ session('userID') }} --}} NIP Dosen
+                                        {{ session('userID') }} 
                                         <p>
                                             <span class="d-lg-none d-md-block">User</span>
                                         </p>
