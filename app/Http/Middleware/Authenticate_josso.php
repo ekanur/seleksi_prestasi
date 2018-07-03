@@ -8,7 +8,7 @@ use Session;
 use Illuminate\Support\Facades\DB;
 include(app_path() . '/josso-php-inc/josso-cfg.inc');
 include(app_path() . '/josso-php-inc/class.jossoagent.php');
-include(app_path() . '/josso-php-inc/class.jossoagent.php');
+
 use App\Dosen_penilai;
 //\Composer\Autoload\includeFile(App\josso-php-inc\josso-cfg.inc);
 

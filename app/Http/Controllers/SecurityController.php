@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 include(app_path() . '/josso-php-inc/josso-cfg.inc');
-
+include(app_path() . '/josso-php-inc/class.jossoagent.php');
 
 class SecurityController extends Controller {
 
