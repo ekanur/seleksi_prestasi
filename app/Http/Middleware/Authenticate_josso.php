@@ -47,8 +47,8 @@ class Authenticate_josso {
                 $ssoSessionId = $josso_agent->accessSession();
                 $user= $josso_agent->getUserInSession();
                 if(isset($user)){
-                    $dosen_penilai = Dosen_penilai::where("nip","=", $user->name)->first();
-                    // dd($admin);
+                    $dosen_penilai = Dosen_penilai::where("nip","like", "%".$user->name."%")->first();
+                    // dd($dosen_penilai);
                     // $dosen = DB::connection("pgsql_3")->table("m_dosen")->join("m_prodi", "m_dosen.pro_kd", "=", "m_prodi.pro_kd")->select("m_prodi.pro_kd", "m_prodi.pro_nm")->where("m_dosen.dsn_nip", "=", $user->name)->get();
 
                     if(is_null($dosen_penilai)){
