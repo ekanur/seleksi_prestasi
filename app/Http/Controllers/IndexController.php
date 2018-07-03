@@ -14,9 +14,10 @@ class IndexController extends Controller
     		$query->where('nip', 'like',  '%'.$nip.'%');
     	})->where([["status_diterima_pkk", "=", 1]])->orderBy("id_calon_mhs", "asc")->get();
 
-    	// dd($calon_mahasiswa);
+    	$nilai = Nilai::where("nip", $nip)->count();
+    	// dd($nilai);
 
-    	return view("dashboard", compact('calon_mahasiswa'));
+    	return view("dashboard", compact('calon_mahasiswa', 'nilai'));
     }
 
     

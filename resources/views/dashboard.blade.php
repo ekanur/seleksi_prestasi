@@ -42,7 +42,7 @@
                                             {{$calon_mahasiswa->detail_mahasiswa->sma->slta}}
                                         </td>
                                         <td>
-                                            @if(is_null($calon_mahasiswa->nilai)) 
+                                            @if($nilai == 0) 
                                             <span class="text-warning">Belum dinilai</span>
                                             @else
                                             <span class="text-success">Sudah dinilai</span>
